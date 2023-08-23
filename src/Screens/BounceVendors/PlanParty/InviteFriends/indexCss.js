@@ -1,0 +1,167 @@
+import {Platform, StyleSheet} from 'react-native';
+
+import {getHp, getWp, FONTFAMILY, FONTSIZE} from '../../../../app/utils';
+export default StyleSheet.create({
+  hostTray: {
+    marginTop: getHp(10),
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    width: '95%',
+    alignSelf: 'center',
+  },
+  allComponentContainer: {
+    backgroundColor: '#FDFDFD',
+    paddingTop: getHp(10),
+    paddingHorizontal: getWp(15),
+    borderWidth: 0,
+    borderColor: 'purple',
+    height: '100%',
+  },
+  searchContainer: {
+    width: '100%',
+    backgroundColor: '#F2F5F6',
+    height: getHp(35),
+    borderRadius: getHp(15),
+  },
+  friendCohostTextContainer: {
+    marginTop: getHp(30),
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  guestListText: {
+    fontFamily: FONTFAMILY.AvenirNextMedium,
+    fontWeight: '600',
+    fontSize: FONTSIZE.Text20,
+    color: '#000',
+  },
+  manageText: {
+    fontWeight: '500',
+    fontSize: FONTSIZE.Text18,
+    fontFamily: FONTFAMILY.AvenirNextMedium,
+    letterSpacing: 0.2,
+    color: '#1FAEF7',
+  },
+  guestHeadingContainer: {
+    backgroundColor: '#FBFBFB',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: getWp(20),
+    paddingVertical: getHp(25),
+  },
+  past: {
+    marginVertical: 10,
+    borderRadius: 15,
+    elevation: 5,
+    backgroundColor: '#fff',
+    flexDirection: 'row',
+    paddingVertical: 30,
+    justifyContent: 'space-evenly',
+  },
+  private: {
+    backgroundColor: '#1FAEF7',
+    borderRadius: 10,
+    alignItems: 'center',
+    paddingVertical: 15,
+    flex: 1,
+  },
+  doubleSubcontainer: {
+    flexDirection: 'row',
+    elevation: 10,
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    width: '70%',
+    alignSelf: 'center',
+  },
+  doubleButton: {
+    alignSelf: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+    marginVertical: 20,
+    // elevation: 10,
+    backgroundColor: '#fff',
+    // flex: 1,
+    borderRadius: 10,
+  },
+  container: {
+    backgroundColor: '#F8F8F8',
+    flex: 1,
+    // overflow: 'visible'
+  },
+  fullInventoryTitleStyle: {
+    marginLeft: 10,
+    color: '#1FAEF7',
+    fontSize: 18,
+    letterSpacing: 0.8,
+  },
+  reviewsTitleStyle: {
+    marginVertical: 30,
+    color: '#000',
+    fontSize: 25,
+    fontWeight: 'bold',
+  },
+  TextInputStyle: {
+    backgroundColor: '#fff',
+    // borderRadius: 24,
+    paddingLeft: 25,
+    fontSize: 18,
+    // borderWidth: 1,
+
+    width: '80%',
+    borderRadius: 10,
+  },
+  bottomContainer: {
+    flexDirection: 'row',
+    padding: 10,
+    justifyContent: 'space-around',
+    position: 'absolute',
+    bottom: 0,
+    backgroundColor: '#000000',
+    width: '100%',
+  },
+  bottomButton: {
+    borderRadius: 24,
+    backgroundColor: '#333333',
+    flexDirection: 'column',
+    paddingVertical: 10,
+    maxHeight: '100%',
+    minWidth: '45%',
+    alignItems: 'center',
+  },
+  ContainerStyle: {
+    width: '100%',
+    marginVertical: 4,
+  },
+  ButtonStyle: {
+    backgroundColor: '#212121',
+    borderRadius: 10,
+    justifyContent: 'flex-start',
+    paddingLeft: 20,
+  },
+  TitleStyle: {
+    fontSize: 16,
+    paddingVertical: 0,
+  },
+  savedGuestListContainerStyle: {
+    width: '90%',
+    alignSelf: 'center',
+    marginVertical: getHp(15),
+  },
+  absoluteCheckIconStyle: {
+    position: 'absolute',
+    right: getHp(20),
+  },
+  undoContainer: {
+    elevation: 10,
+    position: 'absolute',
+    right: getWp(15),
+    top: getHp(13),
+  },
+  undoText: {
+    color: '#1FAEF7',
+    fontSize: FONTSIZE.Text16,
+    fontWeight: '500',
+  },
+  sendItTouchContainer:{flex:1,width:'100%'}
+});

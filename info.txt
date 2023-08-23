@@ -1,0 +1,5 @@
+"$(SRCROOT)/../node_modules/react-native-spotify-remote/ios" : "recursive"
+
+"${PODS_ROOT}/../../node_modules/react-native-spotify-remote/ios/external/SpotifySDK" : "non-recursive"
+
+"@pkhien/react-native-apple-music": "^1.0.2",

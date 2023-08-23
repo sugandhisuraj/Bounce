@@ -1,0 +1,7 @@
+{
+  "name": "bounce",
+  "displayName": "bounce",
+  "bounceVersion": "2.28",
+  "iosAppStoreVersion":"3.1.7",
+  "isProduction": true
+}

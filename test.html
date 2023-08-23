@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="https://unpkg.com/wrld.js@1.x.x"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.1/leaflet.css" rel="stylesheet" />
+  </head>
+  
+  <body>
+  <div style="position: relative">
+    <div id="map" style="height: 900px"></div>
+    <script>
+      var map = Wrld.map("map", "c8d63200b76e47730164ca399e7f422b", {
+        center: [37.7858, -122.401],
+        zoom: 15,
+        indoorsEnabled: true
+      });
+      
+      function onIndoorMapEntered() {
+        setTimeout(function() {
+          map.indoors.exit();
+        }, 5000);
+      }
+
+      map.indoors.on("indoormapenter", onIndoorMapEntered);
+    </script>
+  </div>
+  </body>
+</html>

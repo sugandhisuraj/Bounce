@@ -1,0 +1,53 @@
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+platform :ios, '12.0'
+
+target 'bounce' do
+  config = use_native_modules!
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
+  pod 'react-native-restart', :path => '../node_modules/react-native-restart'
+  pod 'react-native-contacts', :path => '../node_modules/react-native-contacts'
+  pod 'RNEventEmitter', :path => "../node_modules/react-native-events"
+	pod 'RNSpotifyRemote', :path => '../node_modules/react-native-spotify-remote'
+  pod 'react-native-video', :path => '../node_modules/react-native-video'
+  pod 'react-native-camera', :path => '../node_modules/react-native-camera'
+  # pod 'GoogleMaps'
+  # pod 'Google-Maps-iOS-Utils'
+  #pod 'react-native-location', :path => '../node_modules/react-native-location/react-native-location.podspec'
+
+  rn_maps_path = '../node_modules/react-native-maps'
+pod 'react-native-google-maps', :path => rn_maps_path
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # to enable hermes on iOS, change `false` to `true` and then install pods
+    :hermes_enabled => false
+  )
+
+  # pod 'RNExitApp', :path => '../node_modules/react-native-exit-app'
+
+  
+
+  # pod 'react-native-apple-music', :path => '../node_modules/@bouncyapp/react-native-apple-music'
+
+  #pod 'react-native-payments', :path => '../node_modules/react-native-payments'
+
+  target 'bounceTests' do
+    inherit! :complete
+    pod 'GoogleAPIClientForREST/Sheets', '~> 1.2.1'
+    pod 'GoogleSignIn', '~> 4.1.1'
+    # Pods for testing
+  end
+
+   # Enables Flipper.
+  #
+  # Note that if you have use_frameworks! enabled, Flipper will not work and
+  # you should disable the next line.
+  # use_flipper!()
+  use_flipper!({'Flipper' => '0.92.0', 'Flipper-Folly' => '2.6.7'})
+
+  post_install do |installer|
+    react_native_post_install(installer)
+  end
+end
